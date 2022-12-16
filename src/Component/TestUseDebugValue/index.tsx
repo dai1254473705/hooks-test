@@ -8,18 +8,18 @@
  */
 import React, { useState } from "react";
 import { Button } from "antd";
+import useCountDown from '../TestCountDown';
+const img = require('../TestCountDown/13.png')
 
 function TestUseState() {
-  const [count, setCount] = useState(0);
-  const onClick = () => {
-    setCount(count + 1);
-  };
+  const [countdown] = useCountDown(60);
   return (
     <div>
-      <p>You clicked {count} times</p>
-      <Button type="primary" onClick={onClick}>
-        计数器
+      <p>useDebugValue 可用于在 React 开发者工具中显示自定义 hook 的标签。</p>
+      <Button type="primary">
+        倒计时：{countdown}
       </Button>
+      <img src={img} alt="" />
     </div>
   );
 }

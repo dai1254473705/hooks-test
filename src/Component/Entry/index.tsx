@@ -16,6 +16,7 @@ import TestUseMemo from "../TestUseMemo";
 import TestUseRef from "../TestUseRef";
 import TestUseImperativeHandle from "../TestUseImperativeHandle";
 import TestUseLayoutEffect from "../TestUseLayoutEffect";
+import TestUseDebugValue from "../TestUseDebugValue";
 interface IProps {
   activeMenu: string;
 }
@@ -41,6 +42,8 @@ const Entry: FC<IProps> = (props): ReactElement => {
       return <TestUseImperativeHandle />;
     case "useLayoutEffect":
       return <TestUseLayoutEffect />;
+    case "useDebugValue":
+      return <TestUseDebugValue />;
     default:
       return <TestUseState />;
   }
