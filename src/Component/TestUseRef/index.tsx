@@ -15,6 +15,7 @@ function TestUseRef() {
     // `current` 指向已挂载到 DOM 上的文本输入元素
     inputEl.current.focus();
   };
+  console.log('inputEl',inputEl);
   return (
     <div>
       <p>

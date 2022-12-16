@@ -14,6 +14,7 @@ import TestUseContext from "../TestUseContext";
 import TestUseCallback from "../TestUseCallback";
 import TestUseMemo from "../TestUseMemo";
 import TestUseRef from "../TestUseRef";
+import TestUseImperativeHandle from "../TestUseImperativeHandle";
 interface IProps {
   activeMenu: string;
 }
@@ -35,6 +36,8 @@ const Entry: FC<IProps> = (props): ReactElement => {
       return <TestUseMemo />;
     case "useRef":
       return <TestUseRef />;
+    case "useImperativeHandle":
+      return <TestUseImperativeHandle />;
     default:
       return <TestUseState />;
   }
