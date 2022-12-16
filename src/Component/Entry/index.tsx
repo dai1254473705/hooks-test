@@ -15,6 +15,7 @@ import TestUseCallback from "../TestUseCallback";
 import TestUseMemo from "../TestUseMemo";
 import TestUseRef from "../TestUseRef";
 import TestUseImperativeHandle from "../TestUseImperativeHandle";
+import TestUseLayoutEffect from "../TestUseLayoutEffect";
 interface IProps {
   activeMenu: string;
 }
@@ -38,6 +39,8 @@ const Entry: FC<IProps> = (props): ReactElement => {
       return <TestUseRef />;
     case "useImperativeHandle":
       return <TestUseImperativeHandle />;
+    case "useLayoutEffect":
+      return <TestUseLayoutEffect />;
     default:
       return <TestUseState />;
   }
